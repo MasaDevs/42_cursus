@@ -61,7 +61,7 @@ $(NAME):$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus:
-	make all WITH_BONUS=1
+	@make all WITH_BONUS=1
 clean:
 	rm -f ${OBJS} $(BNSOBJS)
 
