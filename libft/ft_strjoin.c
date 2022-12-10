@@ -6,12 +6,11 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:29:48 by marai             #+#    #+#             */
-/*   Updated: 2022/10/11 10:51:44 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:07:31 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

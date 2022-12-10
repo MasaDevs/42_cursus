@@ -6,12 +6,11 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 22:42:32 by marai             #+#    #+#             */
-/*   Updated: 2022/10/14 13:40:55 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:07:25 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

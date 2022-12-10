@@ -6,12 +6,11 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:38:27 by marai             #+#    #+#             */
-/*   Updated: 2022/10/09 15:32:03 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:07:39 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:34:35 by marai             #+#    #+#             */
-/*   Updated: 2022/10/17 13:29:38 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:29:50 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	len;
+	int	len;
 
 	len = 0;
 	while (lst != NULL)

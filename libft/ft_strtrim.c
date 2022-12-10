@@ -6,12 +6,11 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:03:47 by marai             #+#    #+#             */
-/*   Updated: 2022/10/11 10:55:18 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:08:17 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

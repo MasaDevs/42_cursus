@@ -6,12 +6,11 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:05:21 by marai             #+#    #+#             */
-/*   Updated: 2022/10/24 06:50:57 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:06:41 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 {

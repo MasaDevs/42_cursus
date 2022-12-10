@@ -6,7 +6,7 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:03:27 by marai             #+#    #+#             */
-/*   Updated: 2022/10/17 13:26:59 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 15:08:00 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
+# include <string.h>
 
 typedef struct s_list
 {
