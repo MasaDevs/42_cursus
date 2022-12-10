@@ -6,11 +6,12 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:34:35 by marai             #+#    #+#             */
-/*   Updated: 2022/10/24 06:32:08 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/10 17:14:22 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft/libft.h"
 
 ssize_t	ft_ajust(long long nbr, char *base, char c)
 {
@@ -111,6 +112,7 @@ int	ft_printf(const char *argv, ...)
 // 	printf("\t%d\n",ft_printf("%X", (unsigned int)100));
 // 	printf("\t%d\n",ft_printf("%s", "marai"));
 // 	printf("\t%d\n",printf("%s", "marai"));
+// 	ft_printf("abc");
 // }
 // 	int i = 0;
 //     char *s = (char *)calloc(1, (size_t)INT_MAX + 10);
