@@ -6,26 +6,23 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:34:35 by marai             #+#    #+#             */
-/*   Updated: 2022/12/10 17:14:22 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/31 00:14:25 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft/libft.h"
+#include "libft.h"
 
 ssize_t	ft_ajust(long long nbr, char *base, char c)
 {
 	ssize_t	sign;
 	ssize_t	len;
-	ssize_t	baselen;
 
 	sign = 1;
 	len = 0;
-	baselen = ft_strlen(base);
 	if (c == 'p')
 	{
 		len += write(1, "0x", 2);
-		return (ft_putnbr_ptr(nbr, base, sign, baselen) + len);
+		return (ft_putnbr_ptr(nbr, base, sign) + len);
 	}
 	if (nbr < 0)
 	{
@@ -37,7 +34,7 @@ ssize_t	ft_ajust(long long nbr, char *base, char c)
 		else
 			sign = -1;
 	}
-	return (ft_putnbr_base(nbr, base, sign, baselen) + len);
+	return (ft_putnbr_base(nbr, base, sign) + len);
 }
 
 ssize_t	ft_ajust_str(va_list *ap, char c)

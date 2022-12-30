@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 14:46:56 by marai             #+#    #+#             */
-/*   Updated: 2022/10/24 06:50:51 by marai            ###   ########.fr       */
+/*   Created: 2022/10/07 14:05:21 by marai             #+#    #+#             */
+/*   Updated: 2022/12/10 15:06:41 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 {
-	size_t			i;
 	unsigned char	*temp1;
 	unsigned char	*temp2;
+	size_t			i;
 
-	temp1 = (unsigned char *)s1;
-	temp2 = (unsigned char *)s2;
 	i = 0;
+	if (buf1 == NULL && buf2 == NULL)
+		return (NULL);
+	temp1 = (unsigned char *)buf1;
+	temp2 = (unsigned char *)buf2;
 	while (i < n)
 	{
-		if (temp1[i] != temp2[i])
-			return (temp1[i] - temp2[i]);
+		temp1[i] = temp2[i];
 		i++;
 	}
-	return (0);
+	return (buf1);
 }
+
+/*
+#include <string.h>
+int	main(void)
+{
+	printf("%s\n", memcpy(NULL,NULL,0));
+	printf("%s\n", ft_memcpy(NULL,NULL,0));
+}
+*/

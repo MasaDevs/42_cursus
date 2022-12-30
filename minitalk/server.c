@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 14:46:56 by marai             #+#    #+#             */
-/*   Updated: 2022/10/24 06:50:51 by marai            ###   ########.fr       */
+/*   Created: 2022/12/26 14:43:08 by marai             #+#    #+#             */
+/*   Updated: 2022/12/27 00:00:09 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
+#include <sys/types.h>
+#include <signal.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+//
+void bitzero()
 {
-	size_t			i;
-	unsigned char	*temp1;
-	unsigned char	*temp2;
+    
+}
 
-	temp1 = (unsigned char *)s1;
-	temp2 = (unsigned char *)s2;
-	i = 0;
-	while (i < n)
-	{
-		if (temp1[i] != temp2[i])
-			return (temp1[i] - temp2[i]);
-		i++;
-	}
-	return (0);
+void bitone()
+{
+    
+}
+
+
+int main()
+{
+    pid_t pid;
+
+    pid = getpid();
+    signal(16, bitzero);
+    signal(17, bitone);
+    printf("%d\n",pid);
+    while(1)
+        ;
 }

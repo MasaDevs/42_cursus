@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 14:46:56 by marai             #+#    #+#             */
-/*   Updated: 2022/10/24 06:50:51 by marai            ###   ########.fr       */
+/*   Created: 2022/10/10 22:50:16 by marai             #+#    #+#             */
+/*   Updated: 2022/10/10 23:19:42 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*temp1;
-	unsigned char	*temp2;
+	size_t	len;
+	size_t	i;
 
-	temp1 = (unsigned char *)s1;
-	temp2 = (unsigned char *)s2;
+	len = ft_strlen(s);
 	i = 0;
-	while (i < n)
+	while (i <= len)
 	{
-		if (temp1[i] != temp2[i])
-			return (temp1[i] - temp2[i]);
+		if (s[len - i] == (char)c)
+			return ((char *)&(s[len - i]));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
+
+/*
+#include <string.h>
+int	main(void)
+{
+	char	*s;
+
+	s = "libft-test-tokyo";
+	
+	printf("%s\n",strrchr(s, 'l' + 256));
+	printf("%s\n",ft_strrchr(s, 'l' + 256));
+	printf("%s\n",strrchr(s, 'i' + 256));
+	printf("%s\n",ft_strrchr(s, 'i' + 256));
+}
+*/
