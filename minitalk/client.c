@@ -6,7 +6,7 @@
 /*   By: marai <marai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:43:17 by marai             #+#    #+#             */
-/*   Updated: 2022/12/31 13:07:59 by marai            ###   ########.fr       */
+/*   Updated: 2022/12/31 13:19:44 by marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ pid_t	check_error(int argc, char *argv[])
 		return (-1);
 	}
 	pid = ft_atoi(argv[1]);
-	if (pid < 0)
+	if (pid <= 1)
 	{
 		ft_printf("Invalid process id\n");
 		return (-1);
